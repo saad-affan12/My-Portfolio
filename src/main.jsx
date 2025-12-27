@@ -1,3 +1,4 @@
+document.documentElement.style.scrollBehavior = "smooth";
 
 import React from "react";
 import ReactDOM from "react-dom/client";
