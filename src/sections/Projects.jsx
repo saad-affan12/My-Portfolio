@@ -2,13 +2,6 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
-    title: "Train Tracking Web App",
-    description:
-      "A real-time train tracking web application with login support and live train timing updates.",
-    tech: "React, Node.js, APIs",
-    link: "https://github.com/saad-affan12",
-  },
-  {
     title: "AI Smart Attendance System",
     description:
       "An AI-based attendance system using face recognition to automate student attendance.",
@@ -22,7 +15,7 @@ export default function Projects() {
     <section
       id="projects"
       style={{
-        padding: "80px 20px",
+        padding: "clamp(60px, 10vw, 100px) 20px",
         background: "#0B0F19",
         color: "#E5E7EB",
         display: "flex",
@@ -36,22 +29,24 @@ export default function Projects() {
         viewport={{ once: true }}
         style={{ maxWidth: "1000px", width: "100%" }}
       >
+        {/* Title */}
         <h2
           style={{
             textAlign: "center",
-            fontSize: "clamp(1.6rem, 5vw, 2rem)",
+            fontSize: "clamp(1.5rem, 5vw, 2rem)",
             fontWeight: "600",
-            marginBottom: "48px",
+            marginBottom: "clamp(36px, 7vw, 48px)",
           }}
         >
           Projects
         </h2>
 
+        {/* Grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-            gap: "24px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "20px",
           }}
         >
           {projects.map((project, index) => (
@@ -60,14 +55,14 @@ export default function Projects() {
               href={project.link}
               target="_blank"
               whileHover={{
-                y: -8,
+                y: -6,
                 borderColor: "#22D3EE",
-                boxShadow: "0 10px 30px rgba(34, 211, 238, 0.12)",
+                boxShadow: "0 10px 28px rgba(34, 211, 238, 0.16)",
               }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               style={{
                 display: "block",
-                padding: "20px",
+                padding: "18px",
                 borderRadius: "8px",
                 background: "#111827",
                 border: "1px solid #1F2933",
@@ -78,7 +73,7 @@ export default function Projects() {
             >
               <h3
                 style={{
-                  fontSize: "1.15rem",
+                  fontSize: "clamp(1.05rem, 4vw, 1.15rem)",
                   fontWeight: "600",
                   marginBottom: "10px",
                 }}
@@ -88,7 +83,7 @@ export default function Projects() {
 
               <p
                 style={{
-                  fontSize: "0.95rem",
+                  fontSize: "clamp(0.9rem, 3.8vw, 0.95rem)",
                   color: "#9CA3AF",
                   marginBottom: "14px",
                   lineHeight: "1.6",
