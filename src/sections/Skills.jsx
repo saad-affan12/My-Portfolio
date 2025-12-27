@@ -18,7 +18,7 @@ export default function Skills() {
     <section
       id="skills"
       style={{
-        padding: "80px 20px",
+        padding: "clamp(60px, 10vw, 100px) 20px",
         background: "#0B0F19",
         color: "#E5E7EB",
         display: "flex",
@@ -32,39 +32,42 @@ export default function Skills() {
         viewport={{ once: true }}
         style={{ maxWidth: "900px", width: "100%" }}
       >
+        {/* Title */}
         <h2
           style={{
             textAlign: "center",
-            fontSize: "clamp(1.6rem, 5vw, 2rem)",
+            fontSize: "clamp(1.5rem, 5vw, 2rem)",
             fontWeight: "600",
-            marginBottom: "40px",
+            marginBottom: "clamp(28px, 6vw, 40px)",
           }}
         >
           Skills
         </h2>
 
+        {/* Grid */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(120px, 1fr))",
-            gap: "16px",
+            gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
+            gap: "14px",
           }}
         >
           {skills.map((skill, index) => (
             <motion.div
               key={index}
               whileHover={{
-                y: -6,
+                y: -5,
                 borderColor: "#22D3EE",
+                boxShadow: "0 6px 18px rgba(34, 211, 238, 0.14)",
               }}
               transition={{ duration: 0.25, ease: "easeOut" }}
               style={{
-                padding: "14px 12px",
+                padding: "14px 10px",
                 textAlign: "center",
                 borderRadius: "6px",
                 background: "#111827",
                 border: "1px solid #1F2933",
-                fontSize: "0.95rem",
+                fontSize: "clamp(0.85rem, 3.5vw, 0.95rem)",
                 transition: "all 0.25s ease",
               }}
             >
