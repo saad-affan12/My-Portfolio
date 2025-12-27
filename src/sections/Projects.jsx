@@ -2,6 +2,13 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "Train Tracking Web App",
+    description:
+      "A real-time train tracking web application with login support and live train timing updates.",
+    tech: "React, Node.js, APIs",
+    link: "https://github.com/saad-affan12",
+  },
+  {
     title: "AI Smart Attendance System",
     description:
       "An AI-based attendance system using face recognition to automate student attendance.",
@@ -15,7 +22,7 @@ export default function Projects() {
     <section
       id="projects"
       style={{
-        padding: "100px 24px",
+        padding: "80px 20px",
         background: "#0B0F19",
         color: "#E5E7EB",
         display: "flex",
@@ -29,11 +36,10 @@ export default function Projects() {
         viewport={{ once: true }}
         style={{ maxWidth: "1000px", width: "100%" }}
       >
-        {/* Section Title */}
         <h2
           style={{
             textAlign: "center",
-            fontSize: "2rem",
+            fontSize: "clamp(1.6rem, 5vw, 2rem)",
             fontWeight: "600",
             marginBottom: "48px",
           }}
@@ -41,7 +47,6 @@ export default function Projects() {
           Projects
         </h2>
 
-        {/* Projects Grid */}
         <div
           style={{
             display: "grid",
@@ -54,8 +59,12 @@ export default function Projects() {
               key={index}
               href={project.link}
               target="_blank"
-              whileHover={{ y: -8 }}
-              transition={{ duration: 0.25 }}
+              whileHover={{
+                y: -8,
+                borderColor: "#22D3EE",
+                boxShadow: "0 10px 30px rgba(34, 211, 238, 0.12)",
+              }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
               style={{
                 display: "block",
                 padding: "20px",
@@ -64,11 +73,12 @@ export default function Projects() {
                 border: "1px solid #1F2933",
                 textDecoration: "none",
                 color: "#E5E7EB",
+                transition: "all 0.25s ease",
               }}
             >
               <h3
                 style={{
-                  fontSize: "1.2rem",
+                  fontSize: "1.15rem",
                   fontWeight: "600",
                   marginBottom: "10px",
                 }}
