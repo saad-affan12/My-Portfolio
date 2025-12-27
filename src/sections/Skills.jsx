@@ -18,7 +18,7 @@ export default function Skills() {
     <section
       id="skills"
       style={{
-        padding: "100px 24px",
+        padding: "80px 20px",
         background: "#0B0F19",
         color: "#E5E7EB",
         display: "flex",
@@ -32,11 +32,10 @@ export default function Skills() {
         viewport={{ once: true }}
         style={{ maxWidth: "900px", width: "100%" }}
       >
-        {/* Section Title */}
         <h2
           style={{
             textAlign: "center",
-            fontSize: "2rem",
+            fontSize: "clamp(1.6rem, 5vw, 2rem)",
             fontWeight: "600",
             marginBottom: "40px",
           }}
@@ -44,7 +43,6 @@ export default function Skills() {
           Skills
         </h2>
 
-        {/* Skills Grid */}
         <div
           style={{
             display: "grid",
@@ -55,8 +53,11 @@ export default function Skills() {
           {skills.map((skill, index) => (
             <motion.div
               key={index}
-              whileHover={{ y: -6 }}
-              transition={{ duration: 0.2 }}
+              whileHover={{
+                y: -6,
+                borderColor: "#22D3EE",
+              }}
+              transition={{ duration: 0.25, ease: "easeOut" }}
               style={{
                 padding: "14px 12px",
                 textAlign: "center",
@@ -64,7 +65,7 @@ export default function Skills() {
                 background: "#111827",
                 border: "1px solid #1F2933",
                 fontSize: "0.95rem",
-                cursor: "default",
+                transition: "all 0.25s ease",
               }}
             >
               {skill}
